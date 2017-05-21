@@ -87,6 +87,7 @@ echo "Diretório: " . __DIR__; // Diretório do arquivo PHP
 ```html
 <input type="hidden" token="A3453DD">
 ```
+
       - Ao submeter um formulário para um script PHP, os dados são acessados via variáveis globais $_GET[ ], $_POST[ ] ou $_REQUEST[ ]
       - Para passer os valores de um script para outro, armazene novamente em novos campos ocultos. 
     - Query strings
@@ -96,6 +97,7 @@ echo "Diretório: " . __DIR__; // Diretório do arquivo PHP
 ```php
 echo "Nome: $_GET['nome'] \n CPF: $_GET['cpf'] ";
 ``` 
+
       - Após a utilização de Query Strings os dados são perdidos e precisam ser remontados para que possam ser passados a outros scripts
     - Cookies
       - São utilizados para armazenar dados em formato texto no computador dousuário.
@@ -109,6 +111,7 @@ echo "Nome: $_GET['nome'] \n CPF: $_GET['cpf'] ";
 ```php
 setcookie (name, value, expires, path, domain, secure)
 ```
+
       - A função setcookie deve ser executada antes de enviar qualquer saída para o navegador (espaços, echo, print, etc.)
 ```php
 <?php setcookie("firstName", "Don"); ?>
@@ -116,11 +119,13 @@ setcookie (name, value, expires, path, domain, secure)
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html>
 ```
+
       - O commando pode ser chamado diversas vezes para cada valor a ser armazenado
 ```php
 setcookie("nome", "Rommel");
 setcookie("cpf", "12345678900");
 ```
+
     - Controle de Sessão
       - É necessário executar o commando session_start() para iniciar uma sessão e session_destroy() para finalizar uma sessão.
       - As informações de sessão são armazenadas e recuperadas em pares nome e valor a partir da variável global $_SESSION[ ]
